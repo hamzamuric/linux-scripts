@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <dirent.h>
+#include <unistd.h>
 
 int isEmpty(){
 	int n = 0;
 	struct dirent *d;
-	DIR *dir = opendir("/mnt/plavi");
+	DIR *dir = opendir("/mnt/usbdrive");
 	if (dir == NULL)
 		return 1;
 	while ((d = readdir(dir)) != NULL){
