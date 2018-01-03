@@ -21,7 +21,7 @@ int isEmpty(){
 int main(){
 	
 	printf("Unmounting...\n");
-	system("sudo umount /mnt/plavi");
+	system("sudo umount /mnt/usbdrive");
 	if (isEmpty){
 		printf("Unmounted successfuly\n");
 		system("sudo eject /dev/sdb");
