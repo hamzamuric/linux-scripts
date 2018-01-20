@@ -20,7 +20,6 @@ int isEmpty(){
 
 int main(){
 	
-	printf("Unmounting...\n");
 	system("sudo umount /mnt/usbdrive");
 	if (isEmpty){
 		printf("Unmounted successfuly\n");
