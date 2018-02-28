@@ -3,12 +3,6 @@
 kill-script needs process id, so you can give it with a few piped commands.
 example:
 ```{bash}
-ps -aux | grep <process_name> | ~/./kill-script
+$ ps -aux | grep <process_name> | ~/./kill-script
 ```
 (if script is in your home directory)
-
-in this repository are scripts for:
-
-+ mounting (mounting usb flash drive)
-+ unmounting (unmounting usb flash drive)
-
