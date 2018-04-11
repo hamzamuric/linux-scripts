@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <dirent.h>
 #include <unistd.h>
+#include <colors.h> // Custom library (on my github)
 
 int isEmpty(){
 	int n = 0;
@@ -21,13 +22,13 @@ int isEmpty(){
 int main(){
 	
 	system("sudo umount /mnt");
-	if (isEmpty){
-		printf("Unmounted successfuly\n");
+	if (isEmpty()){
+		printf(GRN "Unmounted successfuly\n" RESET);
 		system("sudo eject /dev/sdb");
 		return 0;
 	}
 	else{
-		printf("Error unmounting\n");
+		printf(RED "Error unmounting\n" RESET);
 		return 1;
 }
 
