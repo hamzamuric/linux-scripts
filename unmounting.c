@@ -5,7 +5,7 @@
 int isEmpty(){
 	int n = 0;
 	struct dirent *d;
-	DIR *dir = opendir("/mnt/usbdrive");
+	DIR *dir = opendir("/mnt");
 	if (dir == NULL)
 		return 1;
 	while ((d = readdir(dir)) != NULL){
@@ -20,7 +20,7 @@ int isEmpty(){
 
 int main(){
 	
-	system("sudo umount /mnt/usbdrive");
+	system("sudo umount /mnt");
 	if (isEmpty){
 		printf("Unmounted successfuly\n");
 		system("sudo eject /dev/sdb");
